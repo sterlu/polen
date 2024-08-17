@@ -51,6 +51,9 @@ function App() {
       .then(([allergens, locations]) => {
         setMeta({allergens, locations});
       })
+      .catch((e) => {
+        setError((e?.message || e).toString());
+      })
   }, [])
 
   useEffect(() => {
