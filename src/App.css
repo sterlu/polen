@@ -10,7 +10,7 @@
 }
 .location {
   display: flex;
-  gap: 10px;
+  gap: .5em;
   align-items: center;
 }
 select {
@@ -97,4 +97,17 @@ tbody th {
 .allergen-desc {
   font-size: 0.8em;
   color: #666;
+}
+
+
+.footer {
+  padding: 2em;
+  display: flex;
+  gap: .5em;
+}
+
+@media (max-width: 500px) {
+  .footer {
+    padding: 1em;
+  }
 }

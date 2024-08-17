@@ -160,6 +160,11 @@ function App() {
           </div>
         </>
       )}
+
+      <div className="footer">
+        <a href="https://github.com/sterlu/polen" target="_blank">GitHub</a>
+        <a href="https://data.gov.rs/sr/datasets/kontsentratsije-polena-u-vazdukhu-api/" target="_blank">Podaci</a>
+      </div>
     </div>
   )
 }
