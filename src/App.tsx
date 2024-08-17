@@ -17,7 +17,7 @@ const getColor = (concentration: PollenConcentration, allergens: Allergen[]): st
     return 'white';
   }
   return getColorFromGradient(concentration.value, [
-    {from: 0, color: hexToRgb('#00FF00')},
+    {from: 0, color: hexToRgb('#FFFFFF')},
     {from: allergen.margine_bottom, color: hexToRgb('#FFFF00')},
     {from: allergen.margine_top, color: hexToRgb('#FF0000')},
   ]);
