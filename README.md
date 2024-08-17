@@ -4,4 +4,4 @@ Aplikacija prikazuje javno dostupne podatke o koncentraciji polena u vazduhu koj
 
 Podaci se naizgled najčešće ažuriraju jednom nedeljno, početkom radne nedelje.
 
-Aplikacija je dostupna na [https://sterlu.github.io/polen/](https://sterlu.github.io/polen/).
+Aplikacija je dostupna na [http://polen.sterlu.xyz](http://polen.sterlu.xyz).
