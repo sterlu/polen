@@ -11,15 +11,23 @@ import {getColorFromGradient, hexToRgb} from "./colorUtils.ts";
 
 const fetchPrevDays = 14;
 
+const lightGradient = ['#FFFFFF', '#FFFF00', '#FF0000'];
+const darkGradient = ['#333333', '#a3a300', '#ba0000'];
+
 const getColor = (concentration: PollenConcentration, allergens: Allergen[]): string => {
   const allergen = allergens.find(allergen => allergen.id === concentration.allergen);
   if (!allergen) {
     return 'white';
   }
+
+  const colorGradient = window?.matchMedia('(prefers-color-scheme: dark)').matches
+    ? darkGradient
+    : lightGradient;
+
   return getColorFromGradient(concentration.value, [
-    {from: 0, color: hexToRgb('#FFFFFF')},
-    {from: allergen.margine_bottom, color: hexToRgb('#FFFF00')},
-    {from: allergen.margine_top, color: hexToRgb('#FF0000')},
+    {from: 0, color: hexToRgb(colorGradient[0])},
+    {from: allergen.margine_bottom, color: hexToRgb(colorGradient[1])},
+    {from: allergen.margine_top, color: hexToRgb(colorGradient[2])},
   ]);
 }
 
